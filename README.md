@@ -117,10 +117,10 @@ Each component has a `.scss` file in the `src/components` folder, which you can 
 To enable or disable display of various elements of the overlay, you can use URL parameters, these are described below. Add these to the end of the URL in your browser source in OBS.  
 
 **Docker** e.g:   
-`http://localhost/?theme=mapbox-japan&showMetrics=1&showHeartrate=1&showHeading=1&showAltitude=1&showDistance=1&showSpeed=1`
+`http://localhost/?theme=mapbox-japan&showMetrics&showHeartrate&showHeading&showAltitude&showDistance&showSpeed`
 
 **Node** e.g:  
-`http://localhost:5173/?theme=mapbox-japan&showMetrics=1&showHeartrate=1&showHeading=1&showAltitude=1&showDistance=1&showSpeed=1`
+`http://localhost:5173/?theme=mapbox-japan&showMetrics&showHeartrate&showHeading&showAltitude&showDistance&showSpeed`
 
 > [!NOTE]  
 > The first parameter must be preceded by `?`, and all subsequent parameters must be preceded by `&`  
