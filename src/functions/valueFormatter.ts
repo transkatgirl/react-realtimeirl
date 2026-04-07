@@ -27,6 +27,13 @@ const valueFormatter = (type: string, inputValue: number) => {
       imperial: `${(inputValue * 9 / 5 + 32).toFixed(0)} °F`
     }
   }
+  // windspeed from m/s to mph
+  if (type === 'windspeed') {
+    return {
+      metric: `${(inputValue).toFixed()} m/s`,
+      imperial: `${(inputValue * 2.236936292).toFixed()} mph`
+    }
+  }
   // default return
   return { metric: '0', imperial: '0' }
 }
