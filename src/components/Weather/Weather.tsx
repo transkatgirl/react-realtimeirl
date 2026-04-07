@@ -16,10 +16,10 @@ const Weather = () => {
   const max = `assets/cloud-arrow-up.svg`
   const min = `assets/cloud-arrow-down.svg`
 
-  const feels_like = valueFormatter('temperature', locationData.main.feels_like)
-  const temp = valueFormatter('temperature', locationData.main.temp)
-  const temp_max = valueFormatter('temperature', locationData.main.temp_max)
-  const temp_min = valueFormatter('temperature', locationData.main.temp_min)
+  const feels_like = valueFormatter('temperature', locationData.current.feels_like)
+  const temp = valueFormatter('temperature', locationData.current.temp)
+  const temp_max = valueFormatter('temperature', locationData.daily.temp.max)
+  const temp_min = valueFormatter('temperature', locationData.daily.temp.min)
 
   return (
     <Suspense fallback={<div />}>
