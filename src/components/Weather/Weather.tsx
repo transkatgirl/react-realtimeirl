@@ -18,6 +18,8 @@ const Weather = () => {
 
   const feels_like = valueFormatter('temperature', locationData.main.feels_like)
   const temp = valueFormatter('temperature', locationData.main.temp)
+  const wind = valueFormatter('windspeed', locationData.wind.speed)
+  const gust = valueFormatter('windspeed', locationData.wind.gust)
 
   return (
     <Suspense fallback={<div />}>
@@ -37,6 +39,8 @@ const Weather = () => {
           Current: {useImperial ? temp.imperial : temp.metric}
           <br />
           Feels like: {useImperial ? feels_like.imperial : feels_like.metric}
+          <br />
+          Wind: {useImperial ? wind.imperial : wind.metric} ({useImperial ? gust.imperial : gust.metric})
         </div>
       </div>
     </Suspense>
