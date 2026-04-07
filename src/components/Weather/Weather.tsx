@@ -18,8 +18,6 @@ const Weather = () => {
 
   const feels_like = valueFormatter('temperature', locationData.main.feels_like)
   const temp = valueFormatter('temperature', locationData.main.temp)
-  const temp_max = valueFormatter('temperature', locationData.main.temp_max)
-  const temp_min = valueFormatter('temperature', locationData.main.temp_min)
 
   return (
     <Suspense fallback={<div />}>
@@ -32,26 +30,6 @@ const Weather = () => {
           <div className="icon-container">
             <div className="icon-main">
               <SvgLoader path={icon} fill="white" stroke="black" strokeWidth="8px" />
-            </div>
-          </div>
-          <br />
-          <div className="icon-container">
-            <div className="icon">
-              <SvgLoader path={min} fill="white" stroke="black" strokeWidth="12px" />
-            </div>
-            <div className="text">
-              &nbsp;
-              {useImperial ? temp_min.imperial : temp_min.metric}
-              &nbsp;-&nbsp;
-            </div>
-          </div>
-          <div className="icon-container">
-            <div className="icon">
-              <SvgLoader path={max} fill="white" stroke="black" strokeWidth="12px" />
-            </div>
-            <div className="text">
-              &nbsp;
-              {useImperial ? temp_max.imperial : temp_max.metric}
             </div>
           </div>
         </div>
