@@ -24,10 +24,6 @@ const Weather = () => {
   return (
     <Suspense fallback={<div />}>
       <div className="weather-container">
-        <div className="conditions">
-          {locationData.weather[0].main} /{' '}
-          {locationData.weather[0].description}
-        </div>
         <div className="min-max">
           <div className="icon-container">
             <div className="icon-main">
