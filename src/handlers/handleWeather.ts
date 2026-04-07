@@ -11,7 +11,7 @@ const handleWeather = async () => {
     try {
       const { location } = globalStore.get();
       const response = await fetch(
-        `https://api.openweathermap.org/data/3.0/weather?lat=${location.latitude}&lon=${location.longitude}&exclude=minutely,hourly,alerts&units=metric&appid=${weatherKey}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&exclude=minutely,hourly,alerts&units=metric&appid=${weatherKey}`
       )
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
